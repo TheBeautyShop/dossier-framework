@@ -1,0 +1,41 @@
+{
+  "name": "Dossier",
+  "version": "1.0.0",
+  "author": "Squarespace, Inc.",
+  "description": "A grid blog template",
+  "license": "SEE LICENSE IN LICENSE.txt",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Squarespace/dossier-framework.git"
+  },
+  "scripts": {
+    "build": "squarespace assemble && webpack",
+    "clean": "squarespace clean",
+    "deploy": "squarespace setup && squarespace deploy",
+    "lint": "eslint scripts",
+    "start": "squarespace setup && (npm run watch & npm run server)",
+    "server": "squarespace runserver --auth",
+    "server:auth": "npm run server -- --run-authenticated",
+    "watch": "squarespace assemble --watch & webpack --watch"
+  },
+  "dependencies": {
+    "@squarespace/ancillary": "1.0.2",
+    "@squarespace/controller": "1.0.1",
+    "@squarespace/core": "1.0.1",
+    "@squarespace/mercury": "1.1.1",
+    "@squarespace/polyfills": "1.0.2"
+  },
+  "devDependencies": {
+    "@squarespace/toolbelt": "^0.7.8",
+    "babel-core": "^6.23.1",
+    "babel-eslint": "^7.1.1",
+    "babel-loader": "^6.3.2",
+    "babel-preset-es2015": "^6.22.0",
+    "eslint": "^3.16.0",
+    "eslint-config-squarespace": "^1.0.1",
+    "webpack": "^1.14.0"
+  },
+  "squarespace": {
+    "templateId": "farro-demo"
+  }
+}
